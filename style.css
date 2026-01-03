@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #c8a165;
+  color: #3b2a1a;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background: #f3e6d3;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+.premium {
+  border: 2px solid #6b3f1d;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-box {
+  background: #fff3e0;
+  padding: 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  animation: pop .3s ease;
+}
+
+@keyframes pop {
+  from {transform: scale(.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.warning {
+  font-size: 12px;
+  color: #7a3e00;
+}
+
+.modal-box button {
+  background: #8b5a2b;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.payment-box {
+  background: #e6d2b5;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px 0;
+}

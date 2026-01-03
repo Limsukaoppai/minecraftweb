@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rimm Server Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- USERNAME POPUP -->
+<div class="modal active" id="usernameModal">
+  <div class="modal-box">
+    <h2>Masukkan Username Minecraft</h2>
+    <input type="text" id="usernameInput" placeholder="Contoh: .Rimm" />
+    <p class="warning">
+      Player Bedrock wajib pakai titik di depan nama<br>
+      <b>Contoh: .Rimm</b>
+    </p>
+    <button onclick="saveUsername()">Lanjut</button>
+  </div>
+</div>
+
+<!-- PAYMENT POPUP -->
+<div class="modal" id="paymentModal">
+  <div class="modal-box">
+    <h2 id="payRank"></h2>
+    <p id="payPrice"></p>
+
+    <div class="payment-box">
+      <p>Transfer ke DANA:</p>
+      <b>085179641432</b>
+    </div>
+
+    <button onclick="sendToDiscord()">Lanjut ke Discord</button>
+  </div>
+</div>
+
+<header>
+  <h1>Rimm Server Store</h1>
+  <p id="playerName"></p>
+</header>
+
+<section class="shop">
+
+  <div class="card" onclick="buyRank('Traveller', 5000)">
+    <h3>Traveller</h3>
+    <p class="price">Rp 5.000</p>
+    <ul>
+      <li>/home</li>
+      <li>/rtp</li>
+      <li>/tpa</li>
+    </ul>
+  </div>
+
+  <div class="card" onclick="buyRank('Adventure', 15000)">
+    <h3>Adventure</h3>
+    <p class="price">Rp 15.000</p>
+    <ul>
+      <li>Kit Stone</li>
+      <li>Semua fitur Traveller</li>
+    </ul>
+  </div>
+
+  <div class="card" onclick="buyRank('Slayer', 30000)">
+    <h3>Slayer</h3>
+    <p class="price">Rp 30.000</p>
+    <ul>
+      <li>Kit Iron</li>
+      <li>/feed</li>
+    </ul>
+  </div>
+
+  <div class="card premium" onclick="buyRank('Doomer', 55000)">
+    <h3>Doomer</h3>
+    <p class="price">Rp 55.000</p>
+    <ul>
+      <li>Kit Iron Enchant</li>
+      <li>Semua fitur Slayer</li>
+    </ul>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
